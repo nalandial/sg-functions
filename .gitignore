@@ -1,2 +1,7 @@
 /.idea/
 /functions/node_modules/
+/functions/firebase-debug.log
+/functions/ui-debug.log
+/firestore-debug.log
+/ui-debug.log
+/functions/lib/
