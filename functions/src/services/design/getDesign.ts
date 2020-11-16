@@ -2,7 +2,7 @@ import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/s
 import {getObject} from '../storage/getObject';
 
 /**
- * Saves or updates a design with a given id.
+ * Retrieves a design with a given id.
  * @param {string} id - the id for this design
  * @param {boolean} isPremiumUser - whether the user has a paid subscription. Defaults to false.
  */

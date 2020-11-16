@@ -7,7 +7,7 @@ import {testObjectExists} from "../storage/testsObjectExists";
  * Saves or updates a design with a given id.
  * @param {string} id - the id for this design
  * @param {object} design - design data as an object
- * @param {string} key - edit/admin key if updating, or utils/newDesignKey.ts if creating new (done for performance purposes to avoid an unnecessary DB check)
+ * @param {string} key - edit/admin key if updating, or utils/newDesignKey.ts if creating new (done to avoid security bugs)
  * @param {boolean} isPremiumUser - whether the user has a paid subscription. Defaults to false.
  */
 export const storeOrUpdateDesign = async (id: string, design: Design, key: string, isPremiumUser = false): Promise<void> => {

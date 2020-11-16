@@ -3,7 +3,7 @@ import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/s
 import {removeObject} from '../storage/removeObject';
 
 /**
- * Saves or updates a design with a given id.
+ * Deletes a design with a given id.
  * @param {string} id - the id for this design
  * @param {string} adminKey - the administrator key for this design
  */
