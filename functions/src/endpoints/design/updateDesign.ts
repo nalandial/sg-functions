@@ -1,7 +1,7 @@
-import * as functions from "firebase-functions";
-import {verifyFunctionArgAsString} from "../../utils/verifyFunctionArgAsString";
-import {verifyFunctionArgAsObject} from "../../utils/verifyFunctionArgAsObject";
-import {storeOrUpdateDesign} from "../../services";
+import * as functions from 'firebase-functions';
+import {verifyFunctionArgAsString} from '../../utils/verifyFunctionArgAsString';
+import {verifyFunctionArgAsObject} from '../../utils/verifyFunctionArgAsObject';
+import {modifyDesign} from '../../services';
 
 /**
  * Updates the design with the given id if the key is a valid edit or admin key
@@ -15,6 +15,6 @@ export const updateDesign = functions.https.onCall(async (data, context) => {
   verifyFunctionArgAsString('key', key);
   verifyFunctionArgAsObject('design', design);
 
-  await storeOrUpdateDesign(id, design, key, false);
+  await modifyDesign(id, design, key, false);
   return {};
 });

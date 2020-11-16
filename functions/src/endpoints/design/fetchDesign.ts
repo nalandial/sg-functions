@@ -1,6 +1,6 @@
-import * as functions from "firebase-functions";
-import {getDesign} from "../../services";
-import {verifyFunctionArgAsString} from "../../utils/verifyFunctionArgAsString";
+import * as functions from 'firebase-functions';
+import {getDesign} from '../../services';
+import {verifyFunctionArgAsString} from '../../utils/verifyFunctionArgAsString';
 
 /**
  * Gets the design with the given id

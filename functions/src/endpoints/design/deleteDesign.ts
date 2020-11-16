@@ -1,6 +1,6 @@
-import * as functions from "firebase-functions";
-import {removeDesign} from "../../services";
-import {verifyFunctionArgAsString} from "../../utils/verifyFunctionArgAsString";
+import * as functions from 'firebase-functions';
+import {removeDesign} from '../../services';
+import {verifyFunctionArgAsString} from '../../utils/verifyFunctionArgAsString';
 
 /**
  * Deletes a design with the given id only if the adminKey is valid

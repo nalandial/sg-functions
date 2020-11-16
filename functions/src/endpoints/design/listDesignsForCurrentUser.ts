@@ -1,5 +1,5 @@
-import * as functions from "firebase-functions";
-import mockDesign from "../../utils/mockDesign";
+import * as functions from 'firebase-functions';
+import mockDesign from '../../utils/mockDesign';
 
 /**
  * Retrieves all designs for the currently logged in user
