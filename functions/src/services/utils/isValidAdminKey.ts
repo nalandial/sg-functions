@@ -1,4 +1,4 @@
-import {getFirestoreConnection} from "../../utils/getFirestoreConnection";
+import {getFirestoreConnection} from "./getFirestoreConnection";
 
 /**
  * Determines whether a given key matches the admin key for the specified design

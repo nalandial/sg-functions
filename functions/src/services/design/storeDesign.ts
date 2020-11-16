@@ -1,7 +1,7 @@
 import {storeObject} from '../storage/storeObject';
 import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/storageBucketNames';
 import {generateKey} from '../../utils/generateKey';
-import {getFirestoreConnection} from "../../utils/getFirestoreConnection";
+import {getFirestoreConnection} from '../utils/getFirestoreConnection';
 
 /**
  * Creates a new design belonging to the user.

@@ -1,6 +1,6 @@
 import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/storageBucketNames';
 import {storeObject} from '../storage/storeObject';
-import {isValidAdminKey} from "../utils/isValidAdminKey";
+import {isValidAdminKey} from '../utils/isValidAdminKey';
 
 /**
  * Updates a design with a given id.

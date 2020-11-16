@@ -1,7 +1,7 @@
 import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/storageBucketNames';
 import {removeObject} from '../storage/removeObject';
 import {isValidAdminKey} from '../utils/isValidAdminKey';
-import {getFirestoreConnection} from "../../utils/getFirestoreConnection";
+import {getFirestoreConnection} from '../utils/getFirestoreConnection';
 
 /**
  * Deletes a design with a given id.
