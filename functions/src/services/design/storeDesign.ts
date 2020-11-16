@@ -14,7 +14,7 @@ export const storeDesign = async (userId: string, design: Design, isPremiumUser 
     const bucket = isPremiumUser ? NON_EXPIRATION_BUCKET_NAME : EXPIRATION_BUCKET_NAME;
 
     const adminKey = generateKey();
-    const document = {adminKey: generateKey(), userId};
+    const document = {adminKey, userId};
 
     const firestore = getFirestoreConnection();
     const docReference = firestore.collection('designs').doc();
