@@ -1,5 +1,4 @@
-import * as admin from 'firebase-admin';
-import {initFirebaseApp} from '../../utils/initFirebaseApp';
+import {getFirestoreConnection} from "../../utils/getFirestoreConnection";
 
 /**
  * Determines whether a given key matches the admin key for the specified design
@@ -11,8 +10,8 @@ export const isValidAdminKey = async (designId: string, key: string) : Promise<b
         return false;
     }
 
-    initFirebaseApp();
-    const docReference = admin.firestore().collection('designs').doc(designId);
+    const firestore = getFirestoreConnection();
+    const docReference = firestore.collection('designs').doc(designId);
     const storedAdminKey = (await docReference.get()).get('adminKey');
     return storedAdminKey.toLowerCase() === key.toLowerCase();
 };

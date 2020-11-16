@@ -1,8 +1,7 @@
-import * as admin from 'firebase-admin';
 import {storeObject} from '../storage/storeObject';
 import {EXPIRATION_BUCKET_NAME, NON_EXPIRATION_BUCKET_NAME} from '../../config/storageBucketNames';
 import {generateKey} from '../../utils/generateKey';
-import {initFirebaseApp} from '../../utils/initFirebaseApp';
+import {getFirestoreConnection} from "../../utils/getFirestoreConnection";
 
 /**
  * Creates a new design belonging to the user.
@@ -17,9 +16,9 @@ export const storeDesign = async (userId: string, design: Design, isPremiumUser 
     const adminKey = generateKey();
     const document = {adminKey: generateKey(), userId};
 
-    initFirebaseApp();
-    const docReference = admin.firestore().collection('designs').doc();
-    await admin.firestore().runTransaction(async (transaction) => {
+    const firestore = getFirestoreConnection();
+    const docReference = firestore.collection('designs').doc();
+    await firestore.runTransaction(async (transaction) => {
         // make sure if one of these things fails then we don't end up with orphaned data either in the db or storage
         await transaction.create(docReference, document); // will not actually commit until this function resolves
         // if this fails, addition of document will never be committed
